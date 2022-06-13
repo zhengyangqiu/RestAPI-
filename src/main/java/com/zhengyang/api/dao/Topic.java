@@ -1,6 +1,14 @@
-package com.zhengyang.api;
+package com.zhengyang.api.dao;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+//we need to save the topic class into database
+//by adding entity,jpa know to create a table call topic with three columns
 public class Topic {
+    @Id
+    //add Id to make it become primary key
     private String id;
     private String name;
     private String description;

@@ -1,11 +1,10 @@
 package com.zhengyang.api.controller;
 
-import com.zhengyang.api.Topic;
+import com.zhengyang.api.dao.Topic;
 import com.zhengyang.api.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -38,6 +37,21 @@ public class TopicController {
         topicService.addTopic(topic);
 
     }
+
+    @PutMapping("/topics/{id}")
+    public void updateTopic(@RequestBody Topic topic,@PathVariable String id){
+        topicService.updateTopic(topic,id);
+
+    }
+
+    @DeleteMapping ("/topics/{id}")
+    public void updateTopic(@PathVariable String id){
+        topicService.deleteTopic(id);
+
+    }
+
+
+
 
 
 
