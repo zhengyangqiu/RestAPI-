@@ -1,4 +1,4 @@
-package com.zhengyang.api.dao;
+package com.zhengyang.springbootquickstart.topic.dao;
 
 import org.springframework.data.repository.CrudRepository;
 

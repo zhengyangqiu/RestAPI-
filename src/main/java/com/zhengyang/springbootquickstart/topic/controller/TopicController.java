@@ -1,7 +1,7 @@
-package com.zhengyang.api.controller;
+package com.zhengyang.springbootquickstart.topic.controller;
 
-import com.zhengyang.api.dao.Topic;
-import com.zhengyang.api.service.TopicService;
+import com.zhengyang.springbootquickstart.topic.dao.Topic;
+import com.zhengyang.springbootquickstart.topic.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,9 +12,6 @@ public class TopicController {
     @Autowired
     //mark as dependency injection
     private TopicService topicService;
-
-
-
 
     @RequestMapping("/topics")
     public List<Topic> getAllTopics(){
@@ -45,7 +42,7 @@ public class TopicController {
     }
 
     @DeleteMapping ("/topics/{id}")
-    public void updateTopic(@PathVariable String id){
+    public void deleteTopic(@PathVariable String id){
         topicService.deleteTopic(id);
 
     }

@@ -1,4 +1,4 @@
-package com.zhengyang.api;
+package com.zhengyang;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

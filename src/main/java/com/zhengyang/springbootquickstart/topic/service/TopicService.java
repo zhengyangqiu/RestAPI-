@@ -1,12 +1,11 @@
-package com.zhengyang.api.service;
+package com.zhengyang.springbootquickstart.topic.service;
 
-import com.zhengyang.api.dao.Topic;
-import com.zhengyang.api.dao.TopicRepository;
+import com.zhengyang.springbootquickstart.topic.dao.Topic;
+import com.zhengyang.springbootquickstart.topic.dao.TopicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -32,7 +31,7 @@ public class TopicService {
 
     public Topic getTopic(String id){
         //return topics.stream().filter(t->t.getId().equals(id)).findFirst().get();
-        return topicRepository.findById(id).get();
+        return topicRepository.findById(id).orElse(null);
 
 
     }

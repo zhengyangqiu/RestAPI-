@@ -1,4 +1,4 @@
-package com.zhengyang.api.controller;
+package com.zhengyang.springbootquickstart.topic.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
